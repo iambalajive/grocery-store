@@ -7,7 +7,8 @@ import com.balaji.discount.DiscountStrategy;
 import java.util.List;
 
 /**
- * Discount applied at induvidual code level applied to the entire family of products
+ * Discount applied at item group level
+ * eg: Apply discounts to all category of chips
  */
 public class GroupSpecificDiscount implements DiscountStrategy {
 

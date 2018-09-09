@@ -50,4 +50,15 @@ public class ItemizedBill {
         return parentItemCode;
     }
 
+    @Override
+    public String toString() {
+        return "ItemizedBill{" +
+                "pricePerItem=" + pricePerItem +
+                ", itemCode='" + itemCode + '\'' +
+                ", quantity=" + quantity +
+                ", discountPercentage=" + discountPercentage +
+                ", parentItemCode='" + parentItemCode + '\'' +
+                ", Amount='" + getBundlePrice() + '\'' +
+                '}';
+    }
 }

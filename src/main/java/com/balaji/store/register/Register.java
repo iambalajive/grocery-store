@@ -31,6 +31,12 @@ public class Register extends IRegister {
     }
 
 
+    /**
+     * Pick items from the inventory
+     * Creates a cart with item bundles and attach it to the customer
+     * @param customer
+     * @throws GroceryStoreException
+     */
     @Override
     protected void procureItemFromInventory(Customer customer) throws GroceryStoreException {
 
@@ -44,11 +50,20 @@ public class Register extends IRegister {
     }
 
 
+    /**
+     * Talks to payment Api and attaches the bill to the customer
+     * @param customer
+     * @throws GroceryStoreException
+     */
     @Override
     protected void makePayment(Customer customer) throws GroceryStoreException {
         this.paymentApi.generateBill(customer);
     }
 
+    /**
+     * Assign customer to the Register
+     * @param customer
+     */
     @Override
     protected void assignCustomer(Customer customer) {
         this.customer = customer;

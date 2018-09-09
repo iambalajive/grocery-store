@@ -9,6 +9,9 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Initializer which loads all the items into the inventory
+ */
 public class InventoryInitializer {
 
     private InventoryInitializer() {

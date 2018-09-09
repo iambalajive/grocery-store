@@ -78,7 +78,6 @@ public class Bill {
         for (ItemizedBill itemizedBill : itemizedBills.values()) {
             price += itemizedBill.getBundlePrice();
         }
-
         return Utils.calculateDiscountedPrice(price, discountPercentage);
     }
 

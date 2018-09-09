@@ -5,7 +5,8 @@ import com.balaji.discount.DiscountStrategy;
 import com.balaji.billing.ItemizedBill;
 
 /**
- * Discount applied to items based on the item level based on the item code
+ * Discount that is applied to induvidual items
+ * eg:Induvidual chips varieties
  */
 public class ItemSpecificDiscount implements DiscountStrategy {
 
