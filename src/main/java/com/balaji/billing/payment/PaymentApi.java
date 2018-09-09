@@ -7,7 +7,7 @@ import com.balaji.exception.GroceryStoreException;
 import java.util.List;
 
 /**
- *
+ * Payment Api that generates Bill
  */
 public abstract class PaymentApi {
 

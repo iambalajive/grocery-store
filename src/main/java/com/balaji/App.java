@@ -31,7 +31,7 @@ public class App {
             add(new EmployeeDiscount(10));
         }});
 
-        GroceryStore groceryStore = new GroceryStore(5,inventoryApi,paymentApi);
+        GroceryStore groceryStore = new GroceryStore(1,inventoryApi,paymentApi);
 
         Customer customer = new Customer("Balaji", true, 21);
 
