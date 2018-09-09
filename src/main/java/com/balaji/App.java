@@ -15,7 +15,6 @@ import com.balaji.store.GroceryStore;
 import com.balaji.utils.InventoryInitializer;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Driver program
