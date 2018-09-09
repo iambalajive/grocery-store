@@ -25,7 +25,8 @@ public class App {
         InventoryApi inventoryApi = new StoreInventoryImpl(InventoryInitializer.
                 buildInventory("src//main//resources/items.json"));
         PaymentApi paymentApi = new PaymentImpl(new ArrayList<DiscountStrategy>() {{
-            add(new ItemSpecificDiscount(10,"101"));
+            //Apply discount to item code - 11 Lays chips
+            add(new ItemSpecificDiscount(10,"11"));
             add(new SeniorCitizenDiscount(60,10));
             add(new EmployeeDiscount(10));
         }});
@@ -36,7 +37,7 @@ public class App {
 
         customer.setOrders(new ArrayList<Order>() {{
             add(new Order(2,"11"));
-            add(new Order(2,"21"));
+            add(new Order(2,"13"));
         }});
 
 
@@ -44,7 +45,7 @@ public class App {
 
         seniorCitizen.setOrders(new ArrayList<Order>() {{
             add(new Order(2,"11"));
-            add(new Order(2,"21"));
+            add(new Order(2,"13"));
         }});
 
 

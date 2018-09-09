@@ -22,10 +22,8 @@ Item code refers to the sub item category eg Coke , Pepsi </br>
 | Lays chips    | 11            |   1         |
 | Balaji chips  | 12            |   1         |
 | Coke          | 13            |   2         |
-| Pepsi         | 14            |   2         |
 
 For now all these codes are in json and not stored ANYWHERE. refer items.json </br>
-The above table is just a sample table . Please refer to items.json for the actual codes </br>
 
 # Handling discounts
 For group discounts parent code is used </br>
