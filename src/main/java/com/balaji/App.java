@@ -22,8 +22,8 @@ import java.util.ArrayList;
 public class App {
     public static void main(String[] args) throws GroceryStoreException {
 
-
-        InventoryApi inventoryApi = new StoreInventoryImpl(InventoryInitializer.buildInventory());
+        InventoryApi inventoryApi = new StoreInventoryImpl(InventoryInitializer.
+                buildInventory("src//main//resources/items.json"));
         PaymentApi paymentApi = new PaymentImpl(new ArrayList<DiscountStrategy>() {{
             add(new ItemSpecificDiscount(10,"101"));
             add(new SeniorCitizenDiscount(60,10));

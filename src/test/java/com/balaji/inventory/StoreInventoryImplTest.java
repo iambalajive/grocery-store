@@ -1,10 +1,10 @@
 package com.balaji.inventory;
 
 
+import com.balaji.SpecHelper;
 import com.balaji.customer.Order;
 import com.balaji.exception.GroceryStoreException;
 import com.balaji.items.Item;
-import com.balaji.utils.InventoryInitializer;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,7 +15,7 @@ public class StoreInventoryImplTest {
 
     @Before
     public void init() {
-        inventoryApi = new StoreInventoryImpl(InventoryInitializer.buildInventory());
+        inventoryApi = SpecHelper.buildInventory();
     }
 
     @Test

@@ -18,10 +18,11 @@ public class InventoryInitializer {
 
     }
 
-    public static List<Item> buildInventory() {
+    public static List<Item> buildInventory(String jsonFile) {
+
         List<Item> items = new ArrayList<>();
         try {
-            List<String> lines = Files.readAllLines(Paths.get("src\\main\\resources\\items.json"));
+            List<String> lines = Files.readAllLines(Paths.get(jsonFile));
 
             ObjectMapper objectMapper = new ObjectMapper();
 

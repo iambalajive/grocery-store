@@ -1,5 +1,6 @@
 package com.balaji.store;
 
+import com.balaji.SpecHelper;
 import com.balaji.billing.payment.PaymentApi;
 import com.balaji.billing.payment.PaymentImpl;
 import com.balaji.customer.Customer;
@@ -26,17 +27,7 @@ public class RegisterTest {
     private Customer customer;
     @Before
     public void setUp() {
-        List<Item> items = InventoryInitializer.buildInventory();
-        InventoryApi inventoryApi = new StoreInventoryImpl(items);
-
-        List<DiscountStrategy> discountStrategies = new ArrayList<DiscountStrategy>() {{
-            add(new SeniorCitizenDiscount(79,10));
-            add(new EmployeeDiscount(10));
-        }};
-
-        PaymentApi paymentApi = new PaymentImpl(discountStrategies);
-
-        register  = new Register(1,inventoryApi,paymentApi);
+        register  = new Register(1, SpecHelper.buildInventory(),SpecHelper.buildPaymentApi());
 
         customer = new Customer("Balaji",false,13);
     }

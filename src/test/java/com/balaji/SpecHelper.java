@@ -22,7 +22,7 @@ public class SpecHelper {
     }
 
     public static InventoryApi buildInventory() {
-        List<Item> items = InventoryInitializer.buildInventory();
+        List<Item> items = InventoryInitializer.buildInventory("src//test/resources/test-inventory.json");
         return new StoreInventoryImpl(items);
     }
 
